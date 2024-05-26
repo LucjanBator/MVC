@@ -1,0 +1,22 @@
+@model List<Sponsorzy>
+
+@{
+    ViewBag.Title = "Sponsorzy";
+}
+
+<h2>Sponsorzy</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayFor(model => model[0].n)</th>
+        </tr>
+    </thead>
+    <tbody>
+    @for (int i = 1; i < Model.Count; i++) {
+        <tr>
+            <td>@Html.DisplayFor(model => Model[i].Nazwa)</td>
+        </tr>
+    }
+    </tbody>
+</table>

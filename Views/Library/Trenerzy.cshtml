@@ -1,0 +1,30 @@
+@model List<Trenerzy>
+
+@{
+    ViewBag.Title = "Trenerzy";
+}
+
+<h2>Trenerzy</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayFor(model => model[0].i)</th>
+            <th>@Html.DisplayFor(model => model[0].n)</th>
+            <th>@Html.DisplayFor(model => model[0].w)</th>
+            <th>@Html.DisplayFor(model => model[0].r)</th>
+            <th>@Html.DisplayFor(model => model[0].rr)</th>
+        </tr>
+    </thead>
+    <tbody>
+    @for (int i = 1; i < Model.Count; i++) {
+        <tr>
+            <td>@Html.DisplayFor(model => Model[i].imie)</td>
+            <td>@Html.DisplayFor(model => Model[i].nazwisko)</td>
+            <td>@Html.DisplayFor(model => Model[i].wiek)</td>
+            <td>@Html.DisplayFor(model => Model[i].Rok_dolaczenia_do_klubu)</td>
+            <td>@Html.DisplayFor(model => Model[i].Rok_zakonczenia_pracy_w_klubie)</td>
+        </tr>
+    }
+    </tbody>
+</table>
